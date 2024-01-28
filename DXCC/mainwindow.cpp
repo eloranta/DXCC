@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     model.setTable("dxcc");
+    ui->tableView->setModel(&model);
 }
 
 MainWindow::~MainWindow()
