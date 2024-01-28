@@ -35,18 +35,17 @@ MainWindow::MainWindow(QWidget *parent)
 
     model.setTable("dxcc");
     ui->tableView->setModel(&model);
-
-//    QString params;
-//    params = "insert into dxcc (Dxcc, Prefix, Entity, Deleted, Mix, Ph, CW, RT, SAT, m160, m80, m40, m20, m17, m15, m12, m10, m6, m2, cm70, Comment) values(%1, '%2', '%3', '%4', '%5', '%6', '%7', '%8', '%9', '%10', '%11', '%12', '%13', '%14', '%15', '%16', '%17', '%19', '%19', '%20', '%21')";
-//    params = params.arg(246).arg("1A").arg("Sov. Mil. Order of Malta").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("").arg("");
-//    qDebug() << params;
-//    query.exec(params);
-//    qDebug() << query.lastError();
     model.select();
+    connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(Update()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::Update()
+{
+    model.select();
 }
 
