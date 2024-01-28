@@ -12,13 +12,13 @@ extern bool openDatabase(const QString& name)
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
     if (!openDatabase("dxcc.sqlite"))
     {
         qDebug() << "Cannot open database";
         return -1;
     }
-    MainWindow w;
-    w.show();
-    return a.exec();
+    MainWindow window;
+    window.show();
+    return app.exec();
 }
