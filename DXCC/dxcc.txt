@@ -1,62 +1,62 @@
- "" Spratly Is. AS 50 26 247
- 1A Sov. Mil. Order of Malta EU 28 15 246
- 3A  Monaco EU 27 14 260
- 3B6,7 Agalega & St. Brandon Is. AF 53 39 004
- 3B8 Mauritius AF 53 39 165
- 3B9 Rodrigues I. AF 53 39 207
- 3C Equatorial Guinea AF 47 36 049
- 3C0 Annobon I. AF 52 36 195
- 3D2  Fiji OC 56 32 176
- 3D2 Conway Reef OC 56 32 489
- 3D2  Rotuma I. OC 56 32 460
- 3DA  Kingdom of Eswatini AF 57 38 468
- 3V  Tunisia AF 37 33 474
- 3W,XV Viet Nam AS 49 26 293
- 3X Guinea AF 46 35 107
- 3Y  Bouvet AF 67 38 024
- 3Y  Peter 1 I. AN 72 12 199
- 4J, 4K Azerbaijan AS 29 21 018
- 4L  Georgia AS 29 21 075
- 4O4  Montenegro EU 28 15 514
- 4S  Sri Lanka AS 41 22 315
- 4U_ITU   ITU HQ EU 28 14 117
- 4U_UN  United Nations HQ NA 08 05 289
- 4W Timor   Leste OC 54 28 511
- 4X,4Z Israel AS 39 20 336
- 5A Libya AF 38 34 436
- 5B,C4,P3  Cyprus AS 39 20 215
- 5H 5I  Tanzania AF 53 37 470
- 5N  Nigeria AF 46 35 450
- 5R Madagascar AF 53 39 438
- 5T Mauritania AF 46 35 444
- 5U Niger AF 46 35 187
- 5V Togo AF 46 35 483
- 5W  Samoa OC 62 32 190
- 5X  Uganda AF 48 37 286
- 5Y,5Z  Kenya AF 48 37 430
- 6V,6W  Senegal AF 46 35 456
- 6Y   Jamaica NA 11 08 082
- 7O Yemen AS 39 21 492
- 7P Lesotho AF 57 38 432
- 7Q Malawi AF 53 37 440
- 7T,7Y  Algeria AF 37 33 400
- 8P  Barbados NA 11 08 062
- 8Q  Maldives AS/AF 41 22 159
- 8R   Guyana SA 12 09 129
- 9A  Croatia EU 28 15 497
- 9G   Ghana AF 46 35 424
- 9H  Malta EU 28 15 257
- 9I,9J  Zambia AF 53 36 482
- 9K  Kuwait AS 39 21 348
- 9L  Sierra Leone AF 46 35 458
- 9M2,4  West Malaysia AS 54 28 299
- 9M6,8  East Malaysia OC 54 28 046
- 9N Nepal AS 42 22 369
- 9Q,9T  Dem. Rep. of Congo AF 52 36 414
- 9U Burundi AF 52 36 404
- 9V  Singapore AS 54 28 381
- 9X Rwanda AF 52 36 454
- 9Y,9Z   Trinidad & Tobago SA 11 09 090
+ ^DX0NE$        Spratly Is. AS 50 26 247
+ ^1A[A-Z0-9/]*$ Sov. Mil. Order of Malta EU 28 15 246
+ ^3A[A-Z0-9/]*$ Monaco EU 27 14 260
+ ^3B[67][A-Z0-9/]*$ Agalega & St. Brandon Is. AF 53 39 004
+ ^3B8[A-Z0-9/]*$ Mauritius AF 53 39 165
+ ^3B9[A-Z0-9/]*$ Rodrigues I. AF 53 39 207
+ ^3C[A-Z0-9/]*$  Equatorial Guinea AF 47 36 049
+ ^3C0[A-Z0-9/]*$ Annobon I. AF 52 36 195
+ ^3D2[A-Z0-9/]*$ Fiji OC 56 32 176
+ ^3D2[A-Z0-9/]*$ Conway Reef OC 56 32 489
+ ^3D2[A-Z0-9/]*$ Rotuma I. OC 56 32 460
+ ^3DA[A-Z0-9/]*$ Kingdom of Eswatini AF 57 38 468
+ ^3V[A-Z0-9/]*$  Tunisia AF 37 33 474
+ ^(3W|XV)[A-Z0-9/]*$ Viet Nam AS 49 26 293
+ ^3X[A-Z0-9/]*$  Guinea AF 46 35 107
+ ^3Y[A-Z0-9/]*$  Bouvet AF 67 38 024
+ ^3Y[A-Z0-9/]*$  Peter 1 I. AN 72 12 199
+ ^4[JK][A-Z0-9/]*$ Azerbaijan AS 29 21 018
+ ^4L[A-Z0-9/]*$  Georgia AS 29 21 075
+ ^4O[A-Z0-9/]*$  Montenegro EU 28 15 514
+ ^4S[A-Z0-9/]*$  Sri Lanka AS 41 22 315
+ ^4U[A-Z0-9/]*$  ITU HQ EU 28 14 117
+ ^4U[A-Z0-9/]*$  United Nations HQ NA 08 05 289
+ ^4W[A-Z0-9/]*$  Timor Leste OC 54 28 511
+ ^4[XZ][A-Z0-9/]*$ Israel AS 39 20 336
+ ^5A[A-Z0-9/]*$  Libya AF 38 34 436
+ ^(5B|C4|P3)[A-Z0-9/]*$ Cyprus AS 39 20 215
+ ^5[HI][A-Z0-9/]*$ Tanzania AF 53 37 470
+ ^5N[A-Z0-9/]*$  Nigeria AF 46 35 450
+ ^5R[A-Z0-9/]*$  Madagascar AF 53 39 438
+ ^5T[A-Z0-9/]*$  Mauritania AF 46 35 444
+ ^5U[A-Z0-9/]*$ Niger AF 46 35 187
+ ^5V[A-Z0-9/]*$ Togo AF 46 35 483
+ ^KH8[A-Z0-9/]*$ Samoa OC 62 32 190
+ ^5X[A-Z0-9/]*$  Uganda AF 48 37 286
+ ^5[YZ][A-Z0-9/]*$ Kenya AF 48 37 430
+ ^6[VW][A-Z0-9/]*$ Senegal AF 46 35 456
+ ^6Y[A-Z0-9/]*$  Jamaica NA 11 08 082
+ ^7O[A-Z0-9/]*$  Yemen AS 39 21 492
+ ^7P[A-Z0-9/]*$ Lesotho AF 57 38 432
+ ^7Q[A-Z0-9/]*$ Malawi AF 53 37 440
+ ^7[T-Y][A-Z0-9/]*$ Algeria AF 37 33 400
+ ^8P[A-Z0-9/]*$ Barbados NA 11 08 062
+ ^8Q[A-Z0-9/]*$ Maldives AS/AF 41 22 159
+ ^8R[A-Z0-9/]*$ Guyana SA 12 09 129
+ ^9A[A-Z0-9/]*$ Croatia EU 28 15 497
+ ^9G[A-Z0-9/]*$ Ghana AF 46 35 424
+ ^9H[A-Z0-9/]*$ Malta EU 28 15 257
+ ^9[IJ][A-Z0-9/]*$ Zambia AF 53 36 482
+ ^9K[A-Z0-9/]*$ Kuwait AS 39 21 348
+ ^9L[A-Z0-9/]*$ Sierra Leone AF 46 35 458
+ ^9M[24][A-Z0-9/]*$ West Malaysia AS 54 28 299
+ ^9M[68][A-Z0-9/]*$  East Malaysia OC 54 28 046
+ ^9N[A-Z0-9/]*$ Nepal AS 42 22 369
+ ^9[Q-T][A-Z0-9/]*$ Dem. Rep. of Congo AF 52 36 414
+ ^9U[A-Z0-9/]*$ Burundi AF 52 36 404
+ ^9V[A-Z0-9/]*$ Singapore AS 54 28 381
+ ^9X[A-Z0-9/]*$ Rwanda AF 52 36 454
+ ^9[YZ][A-Z0-9/]*$ Trinidad & Tobago SA 11 09 090
  A2  Botswana AF 57 38 402
  A3 Tonga OC 62 32 160
  A4  Oman AS 39 21 370
