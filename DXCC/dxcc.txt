@@ -1,4 +1,4 @@
- DX0NE$ Spratly Is. AS 50 26 247
+ DX0NE Spratly Is. AS 50 26 247
  1A Sov. Mil. Order of Malta EU 28 15 246
  3A Monaco EU 27 14 260
  3B[67] Agalega & St. Brandon Is. AF 53 39 004
@@ -257,7 +257,7 @@
  TN Congo (Republic of the) AF 52 36 412
  TR  Gabon AF 52 36 420
  TT Chad AF 47 36 410
- TU Cote d'Ivoire AF 46 35 428
+ TU Cote dIvoire AF 46 35 428
  TY Benin AF 46 35 416
  TZ  Mali AF 46 35 442
  UA|UI1|7|RA|RZ European Russia EU (E) 16 054
