@@ -14,9 +14,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void ReadDxccText(QFile file, QSqlQuery query);
 public slots:
     void Update();
 private:
+    void ReadDxccFile();
     Ui::MainWindow *ui;
     QSqlRelationalTableModel model;
 };
