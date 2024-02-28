@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->tableView->setModel(&model);
 
     //ReadDxccFile();
+    ReadAdif();
 
     model.select();
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(Update()));
@@ -73,4 +74,61 @@ MainWindow::~MainWindow()
 void MainWindow::Update()
 {
     model.select();
+}
+
+void MainWindow::ReadAdif()
+{
+    QString jsonFile = qApp->applicationDirPath() + "/QSL.adi";
+    QFile file;
+    file.setFileName(jsonFile);
+    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    const long long MAX_LEN = 500;
+    char data[MAX_LEN];
+    long long len;
+    QString mode;
+    QString country;
+    QString band;
+    QString dxcc;
+    while ((len = file.readLine(data, MAX_LEN)) > 0)
+    {
+        data[len] = 0;
+        QString line(data);
+        QRegularExpression rx("<APP_LoTW_MODEGROUP:\\d+:S>(.+)\\n");
+        QRegularExpressionMatch match = rx.match(line);
+        if (match.hasMatch())
+        {
+            mode = match.captured(1);
+            qDebug() << mode;
+        }
+        rx.setPattern("<BAND:\\d+>(.+)\\n");
+        match = rx.match(line);
+        if (match.hasMatch())
+        {
+            band = match.captured(1);
+            qDebug() << band;
+        }
+        rx.setPattern("<DXCC:\\d+>(.+)\\n");
+        match = rx.match(line);
+        if (match.hasMatch())
+        {
+            dxcc = match.captured(1);
+            qDebug() << dxcc;
+        }
+
+        // rx.setPattern("<COUNTRY:\\d+>(.+)\\n");
+        // match = rx.match(line);
+        // if (match.hasMatch())
+        // {
+        //     country = match.captured(1);
+        //     //            qDebug() << dxcc << country;
+
+        //     Qso qso;
+        //     if(map.find(dxcc) != map.end())
+        //         qso = map[dxcc];
+
+        //     qso.setValues(country, mode, band);
+        //     map[dxcc] = qso;
+        // }
+    }
+    file.close();
 }

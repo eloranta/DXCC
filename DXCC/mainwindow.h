@@ -19,6 +19,7 @@ public slots:
     void Update();
 private:
     void ReadDxccFile();
+    void ReadAdif();
     Ui::MainWindow *ui;
     QSqlRelationalTableModel model;
 };
