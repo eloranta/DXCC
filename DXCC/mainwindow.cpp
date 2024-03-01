@@ -121,11 +121,45 @@ void MainWindow::ReadAdif()
 
 void MainWindow::WriteToDatabase(int dxcc, const QString& mode, const QString& band)
 {
-    //qDebug() << dxcc << mode << band;
+    qDebug() << dxcc << mode << band;
 
     QSqlQuery query;
     QString params = QString("UPDATE dxcc SET Mix = 'V' WHERE Dxcc = %1").arg(dxcc);
-    qDebug() << params;
     query.exec(params);
+
+    if (mode == "DATA")
+        params = QString("UPDATE dxcc SET RT = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (mode == "CW")
+        params = QString("UPDATE dxcc SET CW = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (mode == "PHONE")
+        params = QString("UPDATE dxcc SET Ph = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (mode == "SAT")
+        params = QString("UPDATE dxcc SET SAT = 'V' WHERE Dxcc = %1").arg(dxcc);
+    query.exec(params);
+
+    if (band == "160M")
+        params = QString("UPDATE dxcc SET m160 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (band == "80M")
+        params = QString("UPDATE dxcc SET m80 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (band == "40M")
+        params = QString("UPDATE dxcc SET m40 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (band == "30M")
+        params = QString("UPDATE dxcc SET m30 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (band == "20M")
+        params = QString("UPDATE dxcc SET m20 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (band == "17M")
+        params = QString("UPDATE dxcc SET m17 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (band == "15M")
+        params = QString("UPDATE dxcc SET m15 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (band == "12M")
+        params = QString("UPDATE dxcc SET m12 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (band == "10M")
+        params = QString("UPDATE dxcc SET m10 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (band == "6M")
+        params = QString("UPDATE dxcc SET m6 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    else if (band == "2M")
+        params = QString("UPDATE dxcc SET m2 = 'V' WHERE Dxcc = %1").arg(dxcc);
+    query.exec(params);
+
 }
 
