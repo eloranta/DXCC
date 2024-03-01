@@ -98,37 +98,34 @@ void MainWindow::ReadAdif()
         if (match.hasMatch())
         {
             mode = match.captured(1);
-            qDebug() << mode;
+            //qDebug() << mode;
         }
         rx.setPattern("<BAND:\\d+>(.+)\\n");
         match = rx.match(line);
         if (match.hasMatch())
         {
             band = match.captured(1);
-            qDebug() << band;
+            //qDebug() << band;
         }
         rx.setPattern("<DXCC:\\d+>(.+)\\n");
         match = rx.match(line);
         if (match.hasMatch())
         {
             dxcc = match.captured(1);
-            qDebug() << dxcc;
+            //qDebug() << dxcc;
+            WriteToDatabase(dxcc.toInt(), mode, band);
         }
-
-        // rx.setPattern("<COUNTRY:\\d+>(.+)\\n");
-        // match = rx.match(line);
-        // if (match.hasMatch())
-        // {
-        //     country = match.captured(1);
-        //     //            qDebug() << dxcc << country;
-
-        //     Qso qso;
-        //     if(map.find(dxcc) != map.end())
-        //         qso = map[dxcc];
-
-        //     qso.setValues(country, mode, band);
-        //     map[dxcc] = qso;
-        // }
     }
     file.close();
 }
+
+void MainWindow::WriteToDatabase(int dxcc, const QString& mode, const QString& band)
+{
+    //qDebug() << dxcc << mode << band;
+
+    QSqlQuery query;
+    QString params = QString("UPDATE dxcc SET Mix = 'V' WHERE Dxcc = %1").arg(dxcc);
+    qDebug() << params;
+    query.exec(params);
+}
+

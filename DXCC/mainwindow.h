@@ -20,6 +20,7 @@ public slots:
 private:
     void ReadDxccFile();
     void ReadAdif();
+    void WriteToDatabase(int dxcc, const QString& mode, const QString& band);
     Ui::MainWindow *ui;
     QSqlRelationalTableModel model;
 };
