@@ -36,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->tableView->setModel(&model);
 
     //ReadDxccFile();
-    ReadAdif();
+    //ReadAdif();
 
     model.select();
     connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(Update()));
